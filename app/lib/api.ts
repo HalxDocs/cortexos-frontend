@@ -1,5 +1,7 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export async function analyzeThought(text: string) {
-  const res = await fetch("http://localhost:8080/v1/analyze-thought", {
+  const res = await fetch(`${API_URL}/v1/analyze-thought`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
